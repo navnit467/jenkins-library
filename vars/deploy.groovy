@@ -15,6 +15,13 @@ if (usePipeline) {
                         }    
                     }
                 }
+           stage('SonarQube Analytics') {
+            steps {
+                withSonarQubeEnv('sonar-6') {
+                    sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.2:sonar'
+                    }
+                 }
+              }
            }
         }
     }
