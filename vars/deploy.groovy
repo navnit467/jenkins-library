@@ -17,7 +17,7 @@ if (usePipeline) {
                 }
            stage('build docker image') {
             steps {
-                   sh "docker build -t navnit/java-docker-build-tutorial:latest ."
+                   sh "/usr/local/bin/docker build -t navnit/java-docker-build-tutorial:latest ."
                     }
                  }
               }
