@@ -7,10 +7,13 @@ if (usePipeline) {
     pipeline {
         agent any
         stages {
-            stage('Git Checkout') {
-                steps{
-                    echo "Hello World"
-                   }
+           stage('maven build and test') {
+                    steps {
+                        script {
+                            maven.build()
+                            maven.test()
+                            
+                        }
                 }
            }
         }
