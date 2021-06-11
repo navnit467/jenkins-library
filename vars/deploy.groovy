@@ -7,12 +7,14 @@ if (usePipeline) {
     pipeline {
         stages {
             stage('Git Checkout') {
-                script {
-                    gitCheckout(
-                        branch: "${branch}",
-                        url: "${url}"
-                    )
-                    }
+                steps{
+                    script {
+                        gitCheckout(
+                            branch: "${branch}",
+                            url: "${url}"
+                        )
+                       }
+                   }
                 }
            }
         }
