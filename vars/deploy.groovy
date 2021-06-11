@@ -9,9 +9,7 @@ if (usePipeline) {
         stages {
             stage('Git Checkout') {
                 steps{
-                    scirpt{
                     echo "Hello World"
-                     }
                    }
                 }
            }
