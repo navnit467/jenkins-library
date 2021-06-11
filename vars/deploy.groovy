@@ -8,12 +8,7 @@ if (usePipeline) {
         stages {
             stage('Git Checkout') {
                 steps{
-                    script {
-                        gitCheckout(
-                            branch: "${branch}",
-                            url: "${url}"
-                        )
-                       }
+                    echo 'Hello World'
                    }
                 }
            }
