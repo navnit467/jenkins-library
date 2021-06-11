@@ -15,10 +15,9 @@ if (usePipeline) {
                         }    
                     }
                 }
-           stage('SonarQube Analytics') {
+           stage('build docker image') {
             steps {
-                withSonarQubeEnv('sonar-6') {
-                    sh '/Users/navnitkumarbaranwal/apache-maven-3.8.1/bin/mvn -Dsonar.analysis.mode=preview org.sonarsource.scanner.maven:sonar-maven-plugin:3.2:sonar'
+                   sh "docker build -t navnit/java-docker-build-tutorial:latest ."
                     }
                  }
               }
