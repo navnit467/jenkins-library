@@ -8,12 +8,12 @@ if (usePipeline) {
         agent any
         stages {
            stage('maven build and test') {
-                    steps {
-                        script {
-                            maven.build()
-                            maven.test()
-                            
-                        }
+              steps {
+                script {
+                    maven.build()
+                    maven.test()
+                        }    
+                    }
                 }
            }
         }
