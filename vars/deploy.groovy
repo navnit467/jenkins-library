@@ -18,6 +18,7 @@ if (usePipeline) {
            stage('build docker image') {
             steps {
                    sh "/usr/local/bin/docker build -t navnit/java-docker-build-tutorial:latest ."
+                   sh "docker run -p 8081:8081 -it --rm hello-world-java"
                     }
                  }
               }
