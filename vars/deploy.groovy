@@ -5,10 +5,13 @@ def call(Map param, Boolean usePipeline = true) {
     def url = param.get('url') as String
 if (usePipeline) {
     pipeline {
+        agent any
         stages {
             stage('Git Checkout') {
                 steps{
-                    echo 'Hello World'
+                    scirpt{
+                    echo "Hello World"
+                     }
                    }
                 }
            }
